@@ -1,3 +1,4 @@
+package fowler;
 
 import java.lang.*;
 import java.util.*;
@@ -20,7 +21,7 @@ class Customer {
         Enumeration enum_rentals = rentals.elements();	    
         String result = "Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
-
+        
         while (enum_rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) enum_rentals.nextElement();
