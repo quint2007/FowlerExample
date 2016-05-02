@@ -33,5 +33,9 @@ public class FowlerTest {
 	public void testStatement() {
 		assertEquals("Rental Record for Peter\n\tTitle\t\tDays\tAmount\n\tStar Wars I\t\t7\t9.5\n\tCloud Atlas\t\t10\t30.0\n\tSpectre\t\t2\t1.5\nAmount owed is 41.0\nYou earned 4 frequent renter points", customer.statement());
 	}
+	@Test
+	public void testHtmlStatement(){
+		assertEquals("<H1>Rentals for <EM>Peter</EM></H1><P>\nStar Wars I: 9.5<BR>\nCloud Atlas: 30.0<BR>\nSpectre: 1.5<BR>\n<P>You owe <EM>41.0</EM><P>\nOn this rental you earned <EM>4</EM> frequent renter points<P>", customer.htmlStatement());
+	}
 
 }
