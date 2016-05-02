@@ -17,9 +17,9 @@ public class FowlerTest {
 	
 	@Before
 	public void setUp(){
-		m1 = new Movie("Star Wars I", 12);
-		m2 = new Movie("Cloud Atlas", 4);
-		m3 = new Movie("Spectre", 10);
+		m1 = new Movie("Star Wars I", 0);
+		m2 = new Movie("Cloud Atlas", 1);
+		m3 = new Movie("Spectre", 2);
 		r1 = new Rental(m1, 7);
 		r2 = new Rental(m2, 10);
 		r3 = new Rental(m3, 2);
@@ -31,7 +31,7 @@ public class FowlerTest {
 	}
 	@Test
 	public void testStatement() {
-		assertEquals("Rental Record for Peter\n\tTitle\t\tDays\tAmount\n\tStar Wars I\t\t7\t0.0\n\tCloud Atlas\t\t10\t0.0\n\tSpectre\t\t2\t0.0\nAmount owed is 0.0\nYou earned 3 frequent renter points", customer.statement());
+		assertEquals("Rental Record for Peter\n\tTitle\t\tDays\tAmount\n\tStar Wars I\t\t7\t9.5\n\tCloud Atlas\t\t10\t30.0\n\tSpectre\t\t2\t1.5\nAmount owed is 41.0\nYou earned 4 frequent renter points", customer.statement());
 	}
 
 }
